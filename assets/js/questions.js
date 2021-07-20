@@ -1,6 +1,6 @@
 const questions = [
     {
-        title: "True or False, JavaScript and Java are the same",
+        title: "True or False: JavaScript and Java are the same",
         options: ['True', 'False'],
         answer: 'False'
 
@@ -20,7 +20,7 @@ const questions = [
     {
         title: "This method will allow a user to input information, which will be stored as a string",
         options: ['prompt()', 'alert()', 'confirm()', 'input()'],
-        answer: ""
+        answer: 'prompt()'
 
     },
     {
