@@ -28,28 +28,36 @@ function timeTick() {
 
 function createQuestion() {
     titleEl.textContent = questions[currentQuestion].title
-    
+
+    optionsEl.innerHTML = '';
 
     questions[currentQuestion].options.forEach(function (option) {
         let optionButton = document.createElement('button');
         optionButton.textContent = option;
 
-        optionButton.onclick = function (event) {
-            const corrAnswer = questions[currentQuestion].answer
-            if (event.target.textContent != corrAnswer) {
-            timeRemain = timeRemain - 10
-            currentQuestion++
-
-            if (currentQuestion === questions.length) {
-                
-            };
-        };
-    };
-
         optionsEl.appendChild(optionButton);
-    });
 
-    
+        optionButton.addEventListener('click', checkAnswer);
+    });
 };
 
-startBtn.onclick = startQuiz();
+function checkAnswer(event) {
+    const corrAnswer = questions[currentQuestion].answer
+    if (event.target.textContent != corrAnswer) {
+    timeRemain -= 10
+    };
+
+    currentQuestion++
+
+    if (currentQuestion === questions.length) {
+    console.log('Game Over!');
+    } else {
+    createQuestion();
+    };
+};
+
+function endQuiz() {
+    
+}
+
+startBtn.onclick = startQuiz;
