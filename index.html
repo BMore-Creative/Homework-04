@@ -11,9 +11,9 @@
 </head>
 
 <body>
-    <div class ='score'>View Highscores</div>
+    <a class ='score' href='highscores.html'>View Highscores</a>
     
-    <div class='time'>Time:<span id='timer'></span></div>
+    <div class='time'>Time Remaining:<span id='timer'></span></div>
 
     <section class='start'>
         <h2>JavaScript Coding Quiz</h2>
@@ -24,11 +24,11 @@
         <button id='start'>Start Quiz</button>
     </section>
 
-    <section id='questions'>
+    <section id='questions' class='hide'>
         <h3 id='title'></h3>
         <div id='options'></div>
     </section>
-    <section id='end'>
+    <section id='end' class='hide'>
         <h3>Quiz Over!</h3>
         <p>Final Score:<span id="finalScore"></span> </p>
         <p>
