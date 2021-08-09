@@ -8,7 +8,7 @@ const endEl = document.querySelector('#end');
 const finalScoreEl = document.querySelector('#finalScore');
 const initialsEl = document.querySelector('#initials');
 const scoreBtn = document.querySelector('#submit');
-const startEl = document.querySelector('.start');
+const startEl = document.querySelector('.display');
 
 //Quiz status variables
 let currentQuestion = 0;
@@ -17,10 +17,12 @@ let timerStart
 
 function startQuiz() {
     //hides start screen
+    startEl.removeAttribute('class');
     startEl.setAttribute('class', 'hide');
     
     //displays questions screen
-    questionsEl.removeAttribute('class', 'hide')
+    questionsEl.removeAttribute('class');
+    questionsEl.setAttribute('class', 'display');
     
     //sets timer display to starting time
     timeEl.textContent = timeRemain;
@@ -91,7 +93,8 @@ function endQuiz() {
     questionsEl.setAttribute('class', 'hide');
 
     //displays end screen
-    endEl.removeAttribute('class', 'hide');
+    endEl.removeAttribute('class');
+    endEl.setAttribute('class', 'display')
 
     //sets current time remaining as final score
     finalScoreEl.textContent = timeRemain;

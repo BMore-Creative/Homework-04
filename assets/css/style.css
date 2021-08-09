@@ -1,3 +1,53 @@
+body {
+    background-color: beige;
+}
+
 .hide {
     display: none;
+}
+
+.score {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.time {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.wrapper {
+    margin: 100px auto 0 auto;
+}
+
+.display {
+    text-align: center;
+}
+
+button {
+    display: inline-block;
+    margin: 7px;
+    background-color: rgb(173, 232, 253);
+    border-radius: 15px;
+    padding: 5px;
+}
+
+button:hover {
+    background-color: skyblue;
+}
+
+ol {
+    padding: 5px 40px;
+    border: 2px double black;
+    width: fit-content;
+    margin: 10px auto;
+}
+
+li {
+    padding: 3px;
+    list-style: upper-roman inside none;
+    width: fit-content;
+    
 }

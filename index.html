@@ -1,46 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Coding Quiz</title>
 
     <link rel="stylesheet" href="./assets/css/style.css" />
-</head>
+  </head>
 
-<body>
-    <a class ='score' href='highscores.html'>View Highscores</a>
-    
-    <div class='time'>Time Remaining:<span id='timer'></span></div>
+  <body>
+    <a class="score" href="highscores.html">View Highscores</a>
 
-    <section class='start'>
+    <div class="time">Time Remaining:<span id="timer"></span></div>
+    <main class="wrapper">
+      <section class="display">
         <h2>JavaScript Coding Quiz</h2>
         <p>
-        Answer the following questions within 75 seconds. Incorrect answers will remove
-        10 seconds from the timer. The time remaining will be your final score.
+          Answer the following questions within 75 seconds. Incorrect answers
+          will remove 10 seconds from the timer. The time remaining will be your
+          final score.
         </p>
-        <button id='start'>Start Quiz</button>
-    </section>
+        <button id="start">Start Quiz</button>
+      </section>
 
-    <section id='questions' class='hide'>
-        <h3 id='title'></h3>
-        <div id='options'></div>
-    </section>
-    <section id='end' class='hide'>
+      <section id="questions" class="hide">
+        <h3 id="title"></h3>
+        <div id="options"></div>
+      </section>
+      <section id="end" class="hide">
         <h3>Quiz Over!</h3>
-        <p>Final Score:<span id="finalScore"></span> </p>
+        <p>Final Score:<span id="finalScore"></span></p>
         <p>
-            <input type='text' id='initials' max='3' />
-            <button id='submit'>Submit</button>
+          <input type="text" id="initials" max="3" />
+          <button id="submit">Submit</button>
         </p>
-
-    </section>
-
+      </section>
+    </main>
 
     <script src="./assets/js/questions.js"></script>
     <script src="./assets/js/logic.js"></script>
-</body>
-
+  </body>
 </html>
